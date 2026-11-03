@@ -13,16 +13,15 @@ document.addEventListener("DOMContentLoaded", () => {
     onScroll();
   }
 
-  // 8 фото: images/gallery/1.jpg … 8.jpg
+  // Имена как в папке images/gallery/
   const gallery = [
     { src: "images/gallery/1.jpg", alt: "Занятие 1" },
     { src: "images/gallery/2.jpg", alt: "Занятие 2" },
     { src: "images/gallery/3.jpg", alt: "Занятие 3" },
     { src: "images/gallery/4.jpg", alt: "Занятие 4" },
     { src: "images/gallery/5.jpg", alt: "Занятие 5" },
-    { src: "images/gallery/6.jpg", alt: "Занятие 6" },
-    { src: "images/gallery/7.jpg", alt: "Занятие 7" },
-    
+    { src: "images/gallery/6.png", alt: "Занятие 6" },
+    { src: "images/gallery/7.png", alt: "Занятие 7" },
   ];
 
   const openBtn = document.getElementById("open-gallery");
@@ -59,8 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
   lightbox.querySelectorAll("[data-close]").forEach((el) => {
     el.addEventListener("click", close);
   });
-  btnPrev && btnPrev.addEventListener("click", () => show(index - 1));
-  btnNext && btnNext.addEventListener("click", () => show(index + 1));
+  if (btnPrev) btnPrev.addEventListener("click", () => show(index - 1));
+  if (btnNext) btnNext.addEventListener("click", () => show(index + 1));
 
   document.addEventListener("keydown", (e) => {
     if (lightbox.hidden) return;
