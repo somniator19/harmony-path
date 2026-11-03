@@ -592,3 +592,14 @@ body.lb-open { overflow: hidden; }
   color: #3d6b4f;
 }
 
+.section:nth-of-type(even) {
+  background: rgba(61, 107, 79, 0.04);
+}
+
+.section:nth-of-type(even) .card,
+.section:nth-of-type(even) .edu-card,
+.section:nth-of-type(even) .edu-list li,
+.section:nth-of-type(even) .step,
+.section:nth-of-type(even) .who-list li {
+  background: #fff;
+}
