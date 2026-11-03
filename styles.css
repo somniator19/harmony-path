@@ -373,3 +373,85 @@ a {
     padding: 36px 0;
   }
 }
+
+/* Образование */
+.edu-block {
+  margin-bottom: 28px;
+}
+.edu-heading {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.25rem;
+  color: var(--green-deep);
+  margin: 0 0 12px;
+}
+.edu-card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 14px;
+  background: var(--card);
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: var(--shadow);
+  margin-bottom: 10px;
+  align-items: start;
+}
+.edu-card-main {
+  border: 1px solid var(--line);
+}
+.edu-year {
+  font-weight: 600;
+  color: var(--green);
+  font-size: 0.9rem;
+}
+.edu-place {
+  margin: 0 0 4px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.edu-detail {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.edu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.edu-list li {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 14px;
+  background: var(--card);
+  border-radius: 14px;
+  padding: 14px 16px;
+  box-shadow: var(--shadow);
+  color: var(--muted);
+  font-size: 0.95rem;
+  align-items: start;
+}
+.edu-list .edu-year {
+  padding-top: 1px;
+}
+
+@media (max-width: 800px) {
+  .edu-card,
+  .edu-list li {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-grid, .cards, .steps { grid-template-columns: 1fr; }
+  .exp-item { grid-template-columns: 1fr; gap: 6px; }
+  .header-inner { flex-wrap: wrap; padding: 8px 0; }
+  .nav { gap: 10px 12px; font-size: 0.82rem; }
+  .portrait { max-width: 260px; margin-inline: auto; }
+  .contact-row { flex-direction: column; gap: 2px; }
+  .section { padding: 36px 0; }
+  .lightbox-nav.prev { left: 0; }
+  .lightbox-nav.next { right: 0; }
+}
