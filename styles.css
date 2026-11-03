@@ -566,3 +566,29 @@ body.lb-open { overflow: hidden; }
   color: #e8f0e6;
   font-size: 0.9rem;
 }
+
+/* Лёгкий «живой» hover */
+.card,
+.edu-card,
+.edu-list li,
+.contact-row,
+.step,
+.who-list li {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.card:hover,
+.edu-card:hover,
+.edu-list li:hover,
+.who-list li:hover,
+.step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(47, 82, 60, 0.14);
+  border-color: rgba(61, 107, 79, 0.35);
+}
+
+.card:hover h3 {
+  color: #3d6b4f;
+}
+
