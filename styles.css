@@ -603,3 +603,13 @@ body.lb-open { overflow: hidden; }
 .section:nth-of-type(even) .who-list li {
   background: #fff;
 }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

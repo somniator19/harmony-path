@@ -67,4 +67,21 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "ArrowLeft") show(index - 1);
     if (e.key === "ArrowRight") show(index + 1);
   });
+
+  document.querySelectorAll(".section, .card, .edu-card").forEach((el) => {
+    el.classList.add("reveal");
+  });
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("is-visible");
+          io.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+  document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
 });
