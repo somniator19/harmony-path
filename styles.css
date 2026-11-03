@@ -455,3 +455,114 @@ a {
   .lightbox-nav.prev { left: 0; }
   .lightbox-nav.next { right: 0; }
 }
+
+body.lb-open { overflow: hidden; }
+
+.media-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  max-width: 420px;
+  text-align: left;
+  background: #fff;
+  border: 1px solid rgba(61, 107, 79, 0.2);
+  border-radius: 18px;
+  padding: 20px 22px;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(26, 36, 26, 0.08);
+  font: inherit;
+  color: inherit;
+}
+.media-card:hover {
+  transform: translateY(-2px);
+}
+.media-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: #e4f0e6;
+  color: #2f523c;
+  display: grid;
+  place-items: center;
+}
+.media-icon svg {
+  stroke: #2f523c;
+  color: #2f523c;
+}
+.media-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.media-card-text strong {
+  font-weight: 600;
+  color: #2f523c;
+}
+.media-card-text span {
+  font-size: 0.9rem;
+  color: #4a5a4a;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+.lightbox[hidden] { display: none; }
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 28, 20, 0.82);
+}
+.lightbox-panel {
+  position: relative;
+  z-index: 1;
+  max-width: min(920px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lightbox-panel img {
+  max-height: min(78vh, 720px);
+  max-width: 100%;
+  border-radius: 12px;
+  background: #111;
+}
+.lightbox-close {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  z-index: 2;
+}
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 2;
+}
+.lightbox-nav.prev { left: 8px; }
+.lightbox-nav.next { right: 8px; }
+.lightbox-counter {
+  margin: 12px 0 0;
+  color: #e8f0e6;
+  font-size: 0.9rem;
+}
