@@ -272,6 +272,19 @@
     </div>
   </footer>
 
+  <!-- Поп-ап галереи -->
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox-backdrop" data-close></div>
+    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Галерея фото">
+      <button type="button" class="lightbox-close" data-close aria-label="Закрыть">×</button>
+      <button type="button" class="lightbox-nav prev" id="lb-prev" aria-label="Предыдущее">‹</button>
+      <img id="lb-img" src="" alt="" />
+      <button type="button" class="lightbox-nav next" id="lb-next" aria-label="Следующее">›</button>
+      <p class="lightbox-counter" id="lb-counter"></p>
+    </div>
+  </div>
+
   <script src="js/main.js" defer></script>
+
 </body>
 </html>
