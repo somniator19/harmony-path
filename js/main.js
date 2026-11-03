@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
     { src: "images/gallery/3.jpg", alt: "Занятие 3" },
     { src: "images/gallery/4.jpg", alt: "Занятие 4" },
     { src: "images/gallery/5.jpg", alt: "Занятие 5" },
-    { src: "images/gallery/6.png", alt: "Занятие 6" },
-    { src: "images/gallery/7.png", alt: "Занятие 7" },
+    { src: "images/gallery/6.jpg", alt: "Занятие 6" },
+    { src: "images/gallery/7.jpg", alt: "Занятие 7" },
   ];
 
   const openBtn = document.getElementById("open-gallery");
